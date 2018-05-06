@@ -6,10 +6,12 @@
 		<id name="id" column="id" type="long">
 			<generator class="native"></generator>
 		</id>
+		
 		<set name="classes" cascade="all">
 			<key column="school_id" />
 			<one-to-many class="SchoolClass" />
 		</set>
+		
 		<property name="name" column="name" type="string"></property>
 		<property name="address" column="address" type="string"></property>
 

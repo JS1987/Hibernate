@@ -4,12 +4,17 @@
 <hibernate-mapping>
 <class name="Teacher" table="teachers">
 	<id name="id" column="id" type="long">
-		<generator class="native"></generator>
+		<generator class="increment"></generator>
 	</id>
 	<property name="name" column="name" type="string"></property>
 	<property name="surname" column="surname" type="string"></property>
 	<property name="pesel" column="pesel" type="string"></property>
+	<property name="subject" column="subject" type="string"></property>
 	
+	<set name="schoolClasses" table="teachers_schoolclass" cascade="save-update">
+			<key column="teacher_id" />
+			<many-to-many column="class-id" class="SchoolClass" />
+		</set>
 	
 </class>
 </hibernate-mapping>

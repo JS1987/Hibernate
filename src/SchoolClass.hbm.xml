@@ -11,14 +11,14 @@
 			<one-to-many class="Student" />
 		</set>
 		
-	<set name="teachers" cascade="all">
-			<key column="id" />
-			<many-to-many class="Teacher" />
-		</set>
-		
 	<property name="profile" column="profile" type="string"></property>
 	<property name="currentYear" column="currentYear" type="integer"></property>
 	<property name="startYear" column="startYear" type="integer"></property>
-	
+		
+	<set name="teachers" table="teachers_schoolclass" cascade="save-update">
+			<key column="class_id" />
+			<many-to-many column="teacher-id" class="Teacher" />
+		</set>
+		
 </class>
 </hibernate-mapping>

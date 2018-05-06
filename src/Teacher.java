@@ -1,3 +1,4 @@
+import java.util.Set;
 
 public class Teacher {
 
@@ -5,6 +6,9 @@ public class Teacher {
 	private String name;
 	private String surname;
 	private String pesel;
+	private String subject;
+	private Set<SchoolClass> schoolClasses;
+	
 	
 	public long getId() {
 		return id;
@@ -12,10 +16,6 @@ public class Teacher {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public Teacher() {
-		
 	}
 
 	public String getName() {
@@ -42,4 +42,19 @@ public class Teacher {
 		this.pesel = pesel;
 	}
 	
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	
+	public void setSchoolClasses(Set<SchoolClass> schoolClasses) {
+		this.schoolClasses = schoolClasses;
+	}
+
+	public String toString() {
+		return "Teacher " + name + " (Subject: "+ subject +")";
+	}
 }

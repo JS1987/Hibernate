@@ -41,5 +41,9 @@ public class Student {
 	public void setPesel(String pesel) {
 		this.pesel = pesel;
 	}
+
+	public String toString() {
+		return "\t  " + name + " " + surname + " (" + pesel + ")";
+	}
 	
 }
