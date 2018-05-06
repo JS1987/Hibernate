@@ -50,6 +50,10 @@ public class Teacher {
 		this.subject = subject;
 	}
 	
+	public Set<SchoolClass> getSchoolClasses() {
+		return schoolClasses;
+	}
+	
 	public void setSchoolClasses(Set<SchoolClass> schoolClasses) {
 		this.schoolClasses = schoolClasses;
 	}
