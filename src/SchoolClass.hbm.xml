@@ -15,9 +15,13 @@
 	<property name="currentYear" column="currentYear" type="integer"></property>
 	<property name="startYear" column="startYear" type="integer"></property>
 		
-	<set name="teachers" table="teachers_schoolclass" cascade="save-update">
-			<key column="class_id" />
-			<many-to-many column="teacher-id" class="Teacher" />
+	<set name="teachers" table="teachers_schoolclass" cascade="all">
+			<key>
+			 <column name="class_id" />
+			</key>
+			<many-to-many class="Teacher"> 
+			<column name="teacher-id" />
+			</many-to-many>		
 		</set>
 		
 </class>

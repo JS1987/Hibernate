@@ -14,10 +14,6 @@ public class Student {
 		this.id = id;
 	}
 
-	public Student() {
-		
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -43,7 +39,7 @@ public class Student {
 	}
 
 	public String toString() {
-		return "\t  " + name + " " + surname + " (" + pesel + ")";
+		return getName() + " " + getSurname() + " (" + getPesel() + ")";
 	}
 	
 }

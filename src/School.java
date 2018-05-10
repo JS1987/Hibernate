@@ -1,4 +1,3 @@
-import java.util.HashSet;
 import java.util.Set;
 
 @SuppressWarnings("serial")
@@ -10,13 +9,13 @@ public class School implements java.io.Serializable {
 	private Set<SchoolClass> classes;
 
 	public School() {
-		classes = new HashSet<SchoolClass>();
+		
 	}
 
-	public void addClass(SchoolClass newClass) {
+	/*public void addClass(SchoolClass newClass) {
 		classes.add(newClass);
 	}
-	
+	*/
 	public long getId() {
 		return id;
 	}
@@ -51,6 +50,6 @@ public class School implements java.io.Serializable {
 	
 	public String toString() {
 		return "School: " + getName() + " (" + getAddress() + ", " + getClasses().size() + " classes)";
-}
+	}
 
 }

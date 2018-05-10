@@ -10,10 +10,6 @@ public class SchoolClass implements java.io.Serializable {
 	private Set<Student> students;
 	private Set<Teacher> teachers;
 
-	public SchoolClass() {
-		students = new HashSet<Student>();
-	}
-	
 	public long getId() {
 		return id;
 	}
@@ -47,29 +43,22 @@ public class SchoolClass implements java.io.Serializable {
 	}
 
 	public Set<Student> getStudents() {
-		return students; 
+		return students;
 	}
 
 	public void setStudents(Set<Student> students) {
 		this.students = students;
 	}
-
-	public void addStudent(Student newStudent) {
-		students.add(newStudent);
-	}
-
+	
 	public Set<Teacher> getTeachers() {
-		return teachers; 
+		return teachers;
 	}
 
 	public void setTeachers(Set<Teacher> teachers) {
 		this.teachers = teachers;
 	}
 
-	public void addTeacher(Teacher newTeacher) {
-		teachers.add(newTeacher);
-	}
-	
+
 	public String toString() {
 		return "Class: " + profile + " (Started: " + getStartYear() + ", Current year: " + getCurrentYear() + ")";
 	}

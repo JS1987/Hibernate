@@ -59,6 +59,6 @@ public class Teacher {
 	}
 
 	public String toString() {
-		return "Teacher " + name + " (Subject: "+ subject +")";
+		return "Teacher: " + getName() + " " + getSurname() + " (" + getSubject() + ")";
 	}
 }
